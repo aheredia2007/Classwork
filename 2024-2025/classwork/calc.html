@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/calc.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        document.addEventListener("DOMContentLoaded",(event)=>{
+            const btn0 = document.getElementById("btn0")
+            const btn1 = document.getElementById("btn1")
+            const btn2 = document.getElementById("btn2")
+            const btn3 = document.getElementById("btn3")
+            const btn4 = document.getElementById("btn4")
+            const btn5 = document.getElementById("btn5")
+            const btn6 = document.getElementById("btn6")
+            const btn7 = document.getElementById("btn7")
+            const btn8 = document.getElementById("btn8")
+            const btn9 = document.getElementById("btn9")
+            const btnAdd = document.getElementById("btn10")
+            const btnSubtract = document.getElementById("btn11")
+            const btnMultiply = document.getElementById("btnmultiply")
+            const btnDivide = document.getElementById("btn12")
+            const display= document.getElementById('12')
+            const enter=document.getElementById('enter')
+            let number1;
+            let number2;
+            let operation;
+            let answer;
+            btn0.addEventListener('click',(event)=>{
+                display.value=display.value + "0"
+            })
+            btn1.addEventListener('click',(event)=>{
+                display.value=display.value + "1"
+            })
+            btn2.addEventListener('click',(event)=>{
+                display.value=display.value + "2"
+            })
+            btn3.addEventListener('click',(event)=>{
+                display.value=display.value + "3"
+            })
+            btn4.addEventListener('click',(event)=>{
+                display.value=display.value + "4"
+            })
+            btn5.addEventListener('click',(event)=>{
+                display.value=display.value + "5"
+            })
+            btn6.addEventListener('click',(event)=>{
+                display.value=display.value + "6"
+            })
+            btn7.addEventListener('click',(event)=>{
+                display.value=display.value + "7"
+            })
+            btn8.addEventListener('click',(event)=>{
+                display.value=display.value + "8"
+            })
+            btn9.addEventListener('click',(event)=> {
+                display.value = display.value + "9"
+            })
+            btnAdd.addEventListener('click',(event)=>{
+                number1=Number.parseFloat(display.value)
+                display.value="";
+                operation= "add"
+            })
+            btnSubtract.addEventListener('click',(event)=>{
+                number1=Number.parseFloat(display.value)
+                display.value="";
+                operation= "subtraction"
+            })
+            btnMultiply.addEventListener('click',(event)=>{
+                number1=Number.parseFloat(display.value)
+                display.value="";
+                operation= "multiply"
+            })
+            btnDivide.addEventListener('click',(event)=>{
+                number1=Number.parseFloat(display.value)
+                display.value="";
+                operation= "divided"
+            })
+            enter.addEventListener('click',(event)=>{
+                number2=Number.parseFloat(display.value)
+                display.value="";
+                if(operation=="add"){
+                    answer=number1+number2;
+                    display.value= answer;
+                } else if(operation=="subtraction"){
+                    answer=number1-number2;
+                    display.value= answer;
+                } else if(operation=="multiply"){
+                    answer=number1*number2;
+                    display.value= answer;
+                } else if(operation=="divided"){
+                    answer=number1/number2;
+                    display.value= answer;
+                }
+
+            })
+
+        })
+    </script>
+</head>
+<body>
+<section>
+<input id="12" type="text"><br>
+<button id="btn0" type="button">0</button>
+<button id="btn1" type="button">1</button>
+<button id="btn2" type="button">2</button>
+<button id="btn3" type="button">3</button>
+<button id="btn4" type="button">4</button>
+<button id="btn5" type="button">5</button>
+<button id="btn6" type="button">6</button>
+<button id="btn7" type="button">7</button>
+<button id="btn8" type="button">8</button>
+<button id="btn9" type="button">9</button>
+<button id="btn10" type="button">Add</button>
+<button id="btn11" type="button">Subtract</button>
+<button id="btnmultiply" type="button">Multiply</button>
+<button id="btn12" type="button" type="button">Divide</button>
+<button id="enter" type="button">enter
+</button>
+</section>
+</body>
+</html>
