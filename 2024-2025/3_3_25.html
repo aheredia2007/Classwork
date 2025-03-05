@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+    document.addEventlistener("DOMcontentloaded",(evt)=>-
+    const age=document.getElementbyid("age")
+const check=document.getElementbyid("check")
+const output=document.getElementbyid("adrian")
+check.addEventlistener("click",(evt)=>-{
+  let difference=21- Number.parseInt(age.value)
+  output.textContent="you are"+ difference.tostring()+ "years from 21"
+})
+
+</script>
+
+
+</head>
+<body>
+<h1>
+ Javascript Practice
+</h1>
+</body>
+</html>
