@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+// so what this line does is add something  to the add event lister that can help people make code easier
+    document.addEventListener('DOMContentLoaded',(event)=> {
+//  const is something that help people do coding faster and easier
+const input=document.getElementById("firstname")
+// const is something that helps people get in the input and it stays in the code
+const button=document.getElementById("input")
+// const button is something that helps copy the in input
+const output=document.getElementById("output")
+//const output is something that helps bring some out the output
+button.addEventListener("click",(event)=> {
+// button addeventlister is some that  adds some to the code and makes the code work better
+  let message = "hi, " + input.value + ", ready to code?"
+// let is a tag that helps u copy something  that's in the code
+  output.textContent = message
+// the output helps output something in a code
+        })
+// the brackets help close the code
+    })
+  </script>
+</head>
+<body>
+
+<label>
+Please input ur first name
+</label>
+<br>
+<input id="firstname">
+<br>
+ <button id="input">
+   get message
+ </button>
+<br>
+<h3 id="output">
+placeholder
+</h3>
+</body>
+</html>
