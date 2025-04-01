@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adriann</title>
+    <style>
+        button{
+                width:100px;
+            height:100px;
+            background-color: blue;
+            font-size: 50px;
+            line-height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>tic tac toe</h1>
+<div id="bye">
+<button>
+    &nbsp;
+</button>
+<button>&nbsp;</button>
+<button>
+    &nbsp;
+</button>
+<br>
+<button>
+    &nbsp;
+</button>
+
+<button>
+    &nbsp;
+</button>
+<button>
+    &nbsp;
+</button>
+<br>
+<button>
+    &nbsp;
+</button>
+<button>
+    &nbsp;
+</button>
+<button>
+    &nbsp;
+</button>
+</div>
+</body>
+</html>
+<script>
+ const bye=document.getElementById("bye")
+ let xo="X"
+ let color="#EEEE00"
+bye.addEventListener("click",(evt)=>{
+    evt.target.textContent=xo
+    evt.target.style.backgroundColor=color
+    if(xo=="X"){
+        xo="O"
+
+    }else{
+        xo="X"
+    }
+})
+
+</script>
+
