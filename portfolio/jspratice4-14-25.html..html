@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adrian</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", (event)=>{
+           const city = document.getElementById("wow")
+            const country = document.getElementById("no")
+            const h2 = document.getElementById("idk")
+            const btn = document.getElementById("bet")
+            let messsage = "Test No MSG"
+
+            btn.addEventListener("click", (event)=>{
+                const states = city.options[city.selectedIndex].value
+                const majors = country.options[country.selectedIndex].value
+                console.log(states)
+                console.log(majors)
+                if (states === "Cali" && majors !== "gaming"){
+                   message = "You should check out UC Santa Cruz. Go Banana Slugs!"
+                } else if (states === 'NC' && majors !== 'gaming'){
+                    message= "You should check Shaw University! Go Bears!"
+                }
+
+
+            })
+        })
+    </script>
+</head>
+<body>
+<header><h1>my morning routine</h1></header>
+<main>
+    <label>"what state would you like to go college?"</label>
+    <select id="wow">
+    <option value="NC">North Carolina</option>
+    <option value="Cali">California"</option>
+    <option value=pen>"Pennsylvania</option>
+    </select>
+    <label>What do you want to study?</label>
+    <select id="no">
+    <option value="gaming">gaming</option>
+    <option value="law">law</option>
+    <option value="computer science">Computer Science</option>
+    </select>
+    <button id="bet"> "Get college recommendation".</button>
+        <h2 id="idk"></h2>
+</main> 
+
+
+</body>
+</html>
